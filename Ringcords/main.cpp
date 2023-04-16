@@ -4,12 +4,28 @@ using namespace std;
 
 int main(){
     
-    //double cord1{},cord2,{},cord3{},cord4{},cord5{},cord6{},cord7{},cord8{};
+    int cord1{},cord2,{},cord3{},cord4{},cord5{},cord6{},cord7{},cord8{};
+    float X{},Y{};
+    float value;
     
     
-    cout << "From machine enter Value of X: " <<endl;
-    cout << "From machine enter Value of Y: " <<endl;
-    cout << "From part enter value to increase or decrease: " <<endl;
+    cout << "From machine enter Value of X: ";
+    cin >> X;
+    cout << "From machine enter Value of Y: ";
+    cin >> Y;
+    cout << "From part enter value to increase or decrease: ";
+    cin >> value;
+    
+    section_one = cord1;
+    section_two = cord2;
+    section_three = cord3;
+    section_four = cord4;
+    
+    add_x = cord5;
+    add_y = cord6;
+    
+    minus_x = cord7;
+    minus_y = cord8;
     
     
     
