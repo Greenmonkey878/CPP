@@ -4,7 +4,7 @@ using namespace std;
 
 int main(){
     
-    int cord1{},cord2,{},cord3{},cord4{},cord5{},cord6{},cord7{},cord8{};
+    int cord1{},cord2{},cord3{},cord4{},cord5{},cord6{},cord7{},cord8{};
     float X{},Y{};
     float value;
     
@@ -16,16 +16,14 @@ int main(){
     cout << "From part enter value to increase or decrease: ";
     cin >> value;
     
-    section_one = cord1;
-    section_two = cord2;
-    section_three = cord3;
-    section_four = cord4;
-    
-    add_x = cord5;
-    add_y = cord6;
-    
-    minus_x = cord7;
-    minus_y = cord8;
+    cord1 = 1;
+    cord2 = 2;
+    cord3 = 3;
+    cord4 = 4;
+    cord5 = 5;
+    cord6 = 6;
+    cord7 = 7;
+    cord8 = 8;
     
     
     
