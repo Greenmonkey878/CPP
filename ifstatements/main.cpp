@@ -12,18 +12,28 @@ int main() {
     cin >> num;
     
     if (num >= min){
-        
         cout << "\n===============If statement 1==========" << endl;
-        cout << num << " is greater than " << min << endl;
+        cout << num << " is greater than or equal to " << min << endl;
         
         int diff{num - min};
         cout << num << " is " << diff << " greater than " << min << endl;
-        
-        
     }
-    
-    
-    
-    
+    if (num <= max){
+        cout << "\n==============If statement 2==========" << endl;
+        cout << num << " is less than or equal to " << max << endl;
+        
+        int diff {max - num};
+        cout << num << " is " << diff << " less than " << max << endl;
+    }
+    if (num >= min && num <=max){
+        cout << "\n==============If statement 3==========" << endl;
+        cout << num << " is in range " << endl;
+        cout << "This means statements 1 and 2 must also display" << endl;
+    }
+    if (num == min || num == max){
+        cout << "\n=============If statement 4===========" << endl;
+        cout << num << " is on a boundary" << endl;
+        cout << "This means all 4 statements have been used" << endl;
+    }
     return 0;
 }
