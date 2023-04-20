@@ -4,7 +4,7 @@ using namespace std;
 
 int main(){
     
-    int cord1{},cord2{},cord3{},cord4{},cord5{},cord6{},cord7{},cord8{};
+    const int cord1{1},cord2{2},cord3{3},cord4{4},cord5{5},cord6{6},cord7{7},cord8{8};
     float machine_X{0.0000},machine_Y{0.0000};
     float value {0.0000};
     float X{0.0000},Y{0.0000};
@@ -43,14 +43,34 @@ int main(){
     cout << "Enter which hole section you wish to move 1,2,3,4 for moving X and Y, or 5 for adding just X, 6 for adding just Y, 7 for minus X, 8 for minus Y: " << endl;
     cin >> cord1;
     
-    cout << "You have selected: " << cord1 <<endl;
-    cout << "You have selected: " << cord2 <<endl;
-    cout << "You have selected: " << cord3 <<endl;
-    cout << "You have selected: " << cord4 <<endl;
-    cout << "You have selected: " << cord5 <<endl;
-    cout << "You have selected: " << cord6 <<endl;
-    cout << "You have selected: " << cord7 <<endl;
-    cout << "You have selected: " << cord8 <<endl;
+    if (cord1){
+        cout << "You have selected: " << cord1 <<endl;
+    }
+    else if (cord2){
+         cout << "You have selected: " << cord2 <<endl;
+    }
+    else if (cord3){
+        cout << "You have selected: " << cord3 <<endl;
+    }
+    else if (cord4){
+        cout << "You have selected: " << cord4 <<endl;
+    }
+    else if (cord5){
+       cout << "You have selected: " << cord5 <<endl;
+   }
+    else if (cord6){
+        cout << "You have selected: " << cord6 <<endl;
+    }
+    else if (cord7){
+        cout << "You have selected: " << cord7 <<endl;
+    }
+    else if (cord8){
+        cout << "You have selected: " << cord8 <<endl;
+    }
+    else
+        cout << "invalid paramiter restart" << endl;
+    
+    
     
     
     
