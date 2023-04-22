@@ -18,7 +18,7 @@ int main(){
     //Dimensions in 10inches or less
     
     int package_volume{};
-    
+    double package_cost {};
     cout << "Welcome to the package cost calculator" << endl;
     cout << "Enter length, width, and height of the package separated by spaces: ";
     cin >> length >> width >> height;
@@ -28,8 +28,20 @@ int main(){
         cout << "Sorry, package declined - exceeded dimensions" << endl;
     }else{
         
+        package_volume = length * width * height;
+        package_cost = base_cost;
+        
+        if (package_volume > tier2_threshold){
+            package_cost += package_cost * tier2_surcharge;
+            cout << "adding tier 2 sucharge" << endl;
+        }else if (package_volume > tier1_threshold){
+            package_cost += package_cost * tier1_surcharge;
+            cout << "adding tier 1 surcharge" << endl;
+        }
     }
+    cout << "The volume of you package is: " << package_volume << endl;
     
+    cout << "Your package will cost $" << package_cost << " to ship" << endl;
     
     return 0;
 }
