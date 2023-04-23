@@ -4,68 +4,88 @@ using namespace std;
 
 int main(){
     
-    const int cord1{1},cord2{2},cord3{3},cord4{4},cord5{5},cord6{6},cord7{7},cord8{8};
-    float machine_X{0.0000},machine_Y{0.0000};
-    float value {0.0000};
-    float X{0.0000},Y{0.0000};
+    float machine_X{},machine_Y{};
+    float value {};
+    float X{},Y{};
+    float result_Y{};
+    float result_X{};
     
     cout << "From machine enter Value of X: ";
     cin >> machine_X;
     cout << "From machine enter Value of Y: ";
     cin >> machine_Y;
-    //cout << "From part enter value to increase or decrease: ";
-    //cin >> value;
     
-    cord1 = Y + (-X);
-    cord2 = Y + X;
-    cord3 = -Y + (-X);
-    cord4 = -Y + X;
-    cord5 = machine_X + X;
-    cord6 = machine_Y + Y;
-    cord7 = machine_X - X;
-    cord8 = machine_Y - Y;
+    result_X = X;
+    cout << "From part enter value X: ";
+    cin >> X;
     
-    float result {0.0000};
-    
-    result = X + Y;
-    cout << "From part enter value X and Y: ";
-    cin >> X >> Y;
-    
-    result = value + machine_X;
-    cout << value << " + " << machine_X << " = " << result << endl;
-    cout << "Machine Value X has changed to: " << machine_X << endl;
-    
-    
-    result = value + machine_Y;
-    cout << value << " + " << machine_Y << " = " << result << endl;
-    cout << "Machine Value Y has changed to: " << machine_Y << endl;
+    result_Y = Y;
+    cout << "From part enter value Y: ";
+    cin >> Y;
     
     cout << "Enter which hole section you wish to move 1,2,3,4 for moving X and Y, or 5 for adding just X, 6 for adding just Y, 7 for minus X, 8 for minus Y: " << endl;
-    cin >> cord1;
+    cin >> value;
     
-    if (cord1){
-        cout << "You have selected: " << cord1 <<endl;
+    if (value == 1){
+        cout << "You have selected: " << value << " Performing Y movement positive and X negative" << endl;
+        result_Y = machine_Y + Y;  
+        result_X = machine_X + (-X);
+        cout << Y << " + " << machine_Y << " = " << result_Y << endl;
+        cout << X << " + " << machine_X << " = " << result_X << endl;
+        cout << "Machine Value Y has changed to: " << result_Y << endl;
+        cout << "Machine value X has changed to: " << result_X << endl;
+        
     }
-    else if (cord2){
-         cout << "You have selected: " << cord2 <<endl;
+    else if (value == 2){
+         cout << "You have selected: " << value << " Performing Y movement positive and X positive" << endl;
+         result_Y = machine_Y + Y;
+         result_X = machine_X + X;
+         cout << Y << " + " << machine_Y << " = " << result_Y << endl;
+         cout << X << " + " << machine_X << " = " << result_X << endl;
+         cout << "Machine value Y has changed to: " << result_Y << endl;
+         cout << "Machine Value X has changed to: " << result_X << endl;
     }
-    else if (cord3){
-        cout << "You have selected: " << cord3 <<endl;
+    else if (value == 3){
+        cout << "You have selected: " << value << " Performing Y movement negative and X negative" << endl;
+         result_Y = machine_Y + (-Y);
+         result_X = machine_X + (-X);
+         cout << Y << " + " << machine_Y << " = " << result_Y << endl;
+         cout << X << " + " << machine_X << " = " << result_X << endl;
+         cout << "Machine value Y has changed to: " << result_Y << endl;
+         cout << "Machine Value X has changed to: " << result_X << endl;
     }
-    else if (cord4){
-        cout << "You have selected: " << cord4 <<endl;
+    else if (value == 4){
+        cout << "You have selected: " << value << " Performing Y movement negative and X Positive" << endl;
+         result_Y = machine_Y + (-Y);
+         result_X = machine_X + X;
+         cout << Y << " + " << machine_Y << " = " << result_Y << endl;
+         cout << X << " + " << machine_X << " = " << result_X << endl;
+         cout << "Machine value Y has changed to: " << result_Y << endl;
+         cout << "Machine Value X has changed to: " << result_X << endl;
     }
-    else if (cord5){
-       cout << "You have selected: " << cord5 <<endl;
+    else if (value == 5){
+       cout << "You have selected: " << value << " Performing only X positive movement" << endl;
+         result_X = machine_X + X;
+         cout << X << " + " << machine_X << " = " << result_X << endl;
+         cout << "Machine Value X has changed to: " << result_X << endl;
    }
-    else if (cord6){
-        cout << "You have selected: " << cord6 <<endl;
+    else if (value == 6){
+        cout << "You have selected: " << value << " Performing only Y positive movement" << endl;
+         result_Y = machine_Y + Y;
+         cout << Y << " + " << machine_Y << " = " << result_Y << endl;
+         cout << "Machine value Y has changed to: " << result_Y << endl;
     }
-    else if (cord7){
-        cout << "You have selected: " << cord7 <<endl;
+    else if (value == 7){
+        cout << "You have selected: " << value << " Performing only X negative movement" << endl;
+         result_X = machine_X + (-X);
+         cout << X << " + " << machine_X << " = " << result_X << endl;
+         cout << "Machine Value X has changed to: " << result_X << endl;
     }
-    else if (cord8){
-        cout << "You have selected: " << cord8 <<endl;
+    else if (value == 8){
+        cout << "You have selected: " << value << "Performing only Y negative movement" << endl;
+         result_Y = machine_Y + (-Y);
+         cout << Y << " + " << machine_Y << " = " << result_Y << endl;
+         cout << "Machine value Y has changed to: " << result_Y << endl;
     }
     else
         cout << "invalid paramiter restart" << endl;
